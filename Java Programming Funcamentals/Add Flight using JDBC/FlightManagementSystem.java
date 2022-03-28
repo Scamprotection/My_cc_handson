@@ -6,7 +6,7 @@ public class FlightManagementSystem {
     public boolean addFlight(Flight flight) {
         try {
             Connection connection = DB.getConnection();
-            String query = "insert into flight (flightId, source, destination, noofseats, flightfare) values (?, ?, ?, ?, ?);";
+            String query = "insert into flight (flightId, source, destination, noofseats, flightfare) values (?, ?, ?, ?, ?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, flight.getFlightId());
